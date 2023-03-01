@@ -84,30 +84,29 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*👋🏻 ʜᴇʟʟᴏ {} *
-ɪɴᴅᴏ ᴍᴜꜱɪᴄ ʙᴏᴛ [✨](https://telegra.ph/file/32b62dd73efb28be41fb7.jpg)
-ꜱᴀʏᴀ ᴀᴅᴀʟᴀʜ ʙᴏᴛ ᴍᴀɴᴀɢᴇ + ᴍᴜꜱɪᴄ ʏᴀɴɢ ᴀᴋᴀɴ ᴍᴇɴɢᴇʟᴏʟᴀ ɢʀᴜᴘ ᴍᴜ ᴅᴇɴɢᴀɴ ʙᴀɪᴋ.
-──────────────────────
-× `{}` *ᴜꜱᴇʀꜱ, ᴀᴄʀᴏꜱꜱ* `{}` *ᴄʜᴀᴛꜱ.*
-──────────────────────
-ᴛᴇᴋᴀɴ /help ᴜɴᴛᴜᴋ ᴍᴇʟɪʜᴀᴛ ᴅᴀꜰᴛᴀʀ ᴘᴇʀɪɴᴛᴀʜ ʏᴀɴɢ ᴛᴇʀꜱᴇᴅɪᴀ.
+*Hello {} !*
+❍ IDC Music adalah bot manager + music untuk mengelola grup anda dengan baik.
+❍ Tekan /help untuk Bantuan.
+────────────────────
+× `{}` *users, across* `{}` *chats.*
+────────────────────
 """
 
 buttons = [
         [
         InlineKeyboardButton(
-            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ɢʀᴜᴘ ➕️", url="t.me/indomusic_bot?startgroup=true"
+            text="➕️ Tambahkan ke grup ➕️", url="t.me/IDCmusicbot?startgroup=true"
         ),
     ],
     [
-        InlineKeyboardButton(text="💌 ɢʀᴏᴜᴘ", url="t.me/virtualindoaja"
+        InlineKeyboardButton(text="💌 Channel", url="t.me/idcryptochannel"
         ),
         InlineKeyboardButton(
-            text="📣 ᴄʜᴀɴɴᴇʟ", url="t.me/virtualinaja"
+            text="📣 Group" url="t.me/idcryptoofficial"
         ),
     ],
     [
-        InlineKeyboardButton(text="❓ ʙᴀɴᴛᴜᴀɴ", callback_data="emiko_support"
+        InlineKeyboardButton(text="❓ Bantuan callback_data="emiko_support"
        ),
 
     ],
@@ -366,7 +365,7 @@ def emiko_about_callback(update, context):
     if query.data == "emiko_":
         query.message.edit_text(
             text="🎧 Bantuan Perintah Music."
-            "\npilih menu di bawah ini untuk melihat bantuan Indo Music Bot",
+            "\npilih menu di bawah ini untuk melihat bantuan IDC Music Bot",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -445,8 +444,8 @@ def emiko_about_callback(update, context):
         )
     elif query.data == "emiko_support":
         query.message.edit_text(
-            text="*Bantuan Perintah Indo Music Bot* [📝](https://telegra.ph/file/d0499a67b36f8d5f8a429.jpg)"
-            "\npilih tombol dibawah untuk melihat bantuan perintah Indo Music Bot",
+            text="*Bantuan Perintah IDC Music Bot"
+            "\npilih tombol dibawah untuk melihat bantuan perintah IDC Music Bot",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
