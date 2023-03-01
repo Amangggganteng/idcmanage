@@ -329,7 +329,7 @@ def info(update: Update, context: CallbackContext):
         text += "\n\nThe Disaster level of this person is 'Soldier'."
         disaster_level_present = True
     elif user.id == 1829047705:
-         text += "\n\nOwner Of A Bot. Queen Of @greyyvbss. Bot Name Inspired From 'JoJo'."
+         text += "\n\nOwner Of A Bot. Queen Of @amwang. Bot Name Inspired From 'JoJo'."
          disaster_level_present = True
 
     try:
@@ -461,7 +461,7 @@ def stats(update, context):
     db_size = SESSION.execute("SELECT pg_size_pretty(pg_database_size(current_database()))").scalar_one_or_none()
     uptime = datetime.datetime.fromtimestamp(boot_time()).strftime("%Y-%m-%d %H:%M:%S")
     botuptime = get_readable_time((time.time() - StartTime))
-    status = "╒═══「 *Indo Music Bot Statistik Sistem*: 」\n\n"
+    status = "╒═══「 *IDC Music Bot Statistik Sistem*: 」\n\n"
     status += f"• *Waktu Mulai*: {str(uptime)}" + "\n"
     uname = platform.uname()
     status += f"• *Sistem*: {str(uname.system)}" + "\n"
@@ -485,7 +485,7 @@ def stats(update, context):
         update.effective_message.reply_text(status +
             "\n📊 *Statistik Bot*:\n"
             + "\n".join([mod.__stats__() for mod in STATS]) +
-            "\n\n╘══ 「Powered By: [Indo Music](https://t.me/indomusic_bot) 」\n\n",
+            "\n\n╘══ 「Powered By: [Amang Music](https://t.me/AmangRobot_bot) 」\n\n",
         parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(kontol), disable_web_page_preview=True)
     except BaseException:
         update.effective_message.reply_text(
@@ -497,7 +497,7 @@ def stats(update, context):
                     )
                     + "\n\n📨 [ᴄʜᴀɴɴᴇʟ](https://t.me/virtualinaja) | 📣 [sᴜᴘᴘᴏʀᴛ](https://t.me/virtualindoaja)\n\n"
                 )
-                + "╘══「 Powered By: [Clay Robot](t.me/indomusic_bot) 」\n"
+                + "╘══「 Powered By: [Amang Robot](t.me/AmangRobot_bot) 」\n"
             ),
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(kontol),
